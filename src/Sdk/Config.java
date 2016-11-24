@@ -6,7 +6,6 @@ import com.google.gson.JsonParser;
 import java.io.FileReader;
 
 public class Config {
-
     private static String serverUrl;
 
     public static JsonObject initConfig() {
@@ -16,7 +15,7 @@ public class Config {
 
         try {
             JsonParser parserJ = new JsonParser();
-            json = (JsonObject) parserJ.parse(new FileReader("config.json"));
+            json = (JsonObject) parserJ.parse(new FileReader("src/Sdk/config.json"));
 
 
         } catch (Exception e) {
@@ -27,6 +26,8 @@ public class Config {
         return json;
     }
 
+
+
     public static String getServerUrl() {
         return serverUrl;
     }
@@ -36,4 +37,3 @@ public class Config {
     }
 
 }
-
