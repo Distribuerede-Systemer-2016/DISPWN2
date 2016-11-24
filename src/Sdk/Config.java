@@ -27,8 +27,6 @@ public class Config {
         return json;
     }
 
-
-
     public static String getServerUrl() {
         return serverUrl;
     }
@@ -39,4 +37,3 @@ public class Config {
 
 }
 
-}

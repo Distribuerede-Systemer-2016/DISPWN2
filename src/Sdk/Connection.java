@@ -1,6 +1,5 @@
 package Sdk;
 
-
 import Encrypters.Crypter;
 import Models.UserLogin;
 import com.google.gson.Gson;
@@ -10,6 +9,7 @@ import Models.Book;
 import Models.UserLogin;
 
 import java.util.ArrayList;
+
 public class Connection {
 
     public static String authorizeLogin(String username, String password) {
