@@ -52,5 +52,14 @@ public class Curriculum {
         this.curriculumID = curriculumID;
     }
 
+    @Override
+    public String toString() {
+        return "Curriculum{" +
+                "Curriculum ID=" + curriculumID + '\'' +
+                "school='" + school + '\'' +
+                ", education='" + education + '\'' +
+                ", semester=" + semester +
+                '}';
+    }
 }
 
