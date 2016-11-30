@@ -23,7 +23,7 @@ public class MainMenuView {
     public void showMenu() {
         System.out.println("Du har nu følgende valgmuligheder:\n");
         System.out.println("1) Udskriv alle bøger ");
-        System.out.println("2) Udskriv aktuelle semestre for Ha(mat) & Ha(it) ");
+        System.out.println("2) Udskriv aktuelle semestre ");
         switch (input.nextInt()) {
             case 1:
                 printBooks();
@@ -36,7 +36,7 @@ public class MainMenuView {
 
     public void printBooks() {
         ArrayList<Book> books = mainController.getBooks();
-        System.out.println("Pensumliste: ");
+        System.out.println("Her er alle aktuelle bøger i systemet: ");
         for (Book book : books) {
             System.out.println("id: " + book.getBookID() + " title: " + book.getTitle());
         }

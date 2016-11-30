@@ -29,7 +29,8 @@ public class MainView {
                 if(authUser)
                     mainMenuView.showMenu();
                 else
-                    System.out.println("Forkert brugernavn eller password");
+                    System.out.println("Forkert brugernavn eller password. Prøv igen\n");
+                showMenu();
 
                 break;
             case 2:
@@ -38,6 +39,7 @@ public class MainView {
                 break;
             default:
                 System.out.println("Indtast enten 1 eller 2");
+                showMenu();
                 break;
         }
     }
