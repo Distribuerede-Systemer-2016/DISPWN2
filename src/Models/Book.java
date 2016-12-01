@@ -3,7 +3,7 @@ package Models;
 public class Book extends Curriculum{
 
     private int bookID;
-    private double ISBN;
+    private long ISBN;
     private String publisher;
     private String title;
     private String author;
@@ -12,7 +12,7 @@ public class Book extends Curriculum{
     private double priceCDON;
     private int version;
 
-    public Book(int bookID, String publisher, String title, String author, int version, double ISBN, double priceAB, double priceSAXO, double priceCDON) {
+    public Book(int bookID, String publisher, String title, String author, int version, long ISBN, double priceAB, double priceSAXO, double priceCDON) {
         this.bookID = bookID;
         this.publisher = publisher;
         this.title = title;
@@ -29,7 +29,7 @@ public class Book extends Curriculum{
         return bookID;
     }
 
-    public double getISBN() {
+    public long getISBN() {
         return ISBN;
     }
 

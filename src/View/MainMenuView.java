@@ -56,7 +56,6 @@ public class MainMenuView {
                 + "\nPris AB \t" + book.getPriceAB() + "	 Kr. \n");
     }
 
-
     private void printPensumListe() {
 
         input = new Scanner(System.in);
@@ -65,7 +64,10 @@ public class MainMenuView {
 
         System.out.println("Vælg ID'et på det semester, som du vil have vist bøgerne for.\n");
         for (Curriculum curriculum : curriculums) {
-            System.out.println("ID: " + curriculum.getCurriculumID() + " - " + curriculum.getSchool() + " " + curriculum.getSemester() + ". Semester  " + curriculum.getEducation());
+            System.out.println("ID: " + curriculum.getCurriculumID() + " - "
+                    + curriculum.getSchool() + " "
+                    + curriculum.getSemester() + ". Semester  "
+                    + curriculum.getEducation());
         }
         int searchCurriculum;
         do {
@@ -80,7 +82,7 @@ public class MainMenuView {
         } while (searchCurriculum <= 0 || searchCurriculum > curriculums.size());
 
         ArrayList<Book> curriculumBooks = HTTPRequest.getCurriculumBooks(searchCurriculum);
-        System.out.println(" \nFor at få vist priserner på en bestemt bog; indtast ID'et på den ønskede bog");
+        System.out.println("\nFor at få vist priserner på en bestemt bog; indtast ID'et på den ønskede bog");
         System.out.println("Følgende bøger er aktuelle på det valgte semester:\n");
 
         for (Book book : curriculumBooks) {
@@ -90,7 +92,6 @@ public class MainMenuView {
                     + "\n Udgiver:   " + book.getPublisher()
                     + "\n Version:   " + book.getVersion()
                     + "\n ISBN:      " + book.getISBN());
-
         }
         printBook();
     }
