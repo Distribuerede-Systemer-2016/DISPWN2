@@ -27,7 +27,6 @@ public class Connection {
         try {
             WebResource webResource = client
                     .resource("http://localhost:8080/server2_0_war_exploded/") // ServerURL
-
                     .path(path);
 
             clientResponse = webResource.accept("application/json").post(ClientResponse.class, json);

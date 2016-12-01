@@ -65,7 +65,6 @@ public class HTTPRequest {
         return book;
     }
 
-
     public static boolean createUser(User user) {
         ClientResponse clientResponse = Connection.post(null, "/user/", new Gson().toJson(user));
         if (clientResponse == null) {
@@ -76,7 +75,6 @@ public class HTTPRequest {
             }
         }
         return false;
-
     }
 
     public static ArrayList<Curriculum> getCurriculums() {
@@ -84,7 +82,7 @@ public class HTTPRequest {
         ArrayList<Curriculum> curriculums = null;
 
         if (clientResponse == null) {
-            System.out.println("No sdk");
+            System.out.println("No sdk ");
         } else {
             String encryptedJson = clientResponse.getEntity(String.class);
             if (clientResponse.getStatus() == 200) {
@@ -103,7 +101,7 @@ public class HTTPRequest {
         ArrayList<Book> books = null;
 
         if (clientResponse == null) {
-            System.out.println("No sdk");
+            System.out.println("No sdk  ");
         } else {
             String encryptedJson = clientResponse.getEntity(String.class);
             if (clientResponse.getStatus() == 200) {
