@@ -53,7 +53,7 @@ public class MainMenuView {
                 + " title: " + book.getTitle()
                 + "\nPris Saxo \t" + book.getPriceSAXO() + "\t Kr. "
                 + "\nPris CDON \t" + book.getPriceCDON() + "	 Kr. "
-                + "\nPris AB \t" + book.getPriceAB() + "	 Kr. ");
+                + "\nPris AB \t" + book.getPriceAB() + "	 Kr. \n");
     }
 
 
@@ -84,9 +84,12 @@ public class MainMenuView {
         System.out.println("Følgende bøger er aktuelle på det valgte semester:\n");
 
         for (Book book : curriculumBooks) {
-            System.out.println("ID: " + book.getBookID()
-                    + "\t Title: " + book.getTitle()
-                    + "\t ISBN Nummer: " + book.getIsbn());
+            System.out.println("ID:  " + book.getBookID()
+                    + "\n Titel:     " + book.getTitle()
+                    + "\n Forfatter: " + book.getAuthor()
+                    + "\n Udgiver:   " + book.getPublisher()
+                    + "\n Version:   " + book.getVersion()
+                    + "\n ISBN:      " + book.getISBN());
 
         }
         printBook();

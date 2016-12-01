@@ -1,100 +1,65 @@
 package Models;
-
+//Kun oprettet getters i forhold til serveren
 public class Book extends Curriculum{
 
-    private String title;
-    private int version;
-    private double isbn;
     private int bookID;
+    private double ISBN;
+    private String publisher;
+    private String title;
+    private String author;
+    private double priceAB;
     private double priceSAXO;
     private double priceCDON;
-    private double priceAB;
-    private String author;
-    private String Publisher;
+    private int version;
 
-
-    public Book(String title, int version, double isbn, int bookID, double priceSAXO, double priceCDON, double priceAB, String author, String publisher) {
-        this.title = title;
-        this.version = version;
-        this.isbn = isbn;
+    public Book(int bookID, String publisher, String title, String author, int version, double ISBN, double priceAB, double priceSAXO, double priceCDON) {
         this.bookID = bookID;
+        this.publisher = publisher;
+        this.title = title;
+        this.author = author;
+        this.version = version;
+        this.ISBN = ISBN;
+        this.priceAB = priceAB;
         this.priceSAXO = priceSAXO;
         this.priceCDON = priceCDON;
-        this.priceAB = priceAB;
-        this.author = author;
-        Publisher = publisher;
-    }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public int getVersion() {
-        return version;
-    }
-
-    public void setVersion(int version) {
-        this.version = version;
-    }
-
-    public double getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(double isbn) {
-        this.isbn = isbn;
     }
 
     public int getBookID() {
         return bookID;
     }
 
-    public void setBookID(int bookID) {
-        this.bookID = bookID;
+    public double getISBN() {
+        return ISBN;
     }
 
-    public double getPriceSAXO() {
-        return priceSAXO;
+    public String getPublisher() {
+        return publisher;
     }
 
-    public void setPriceSAXO(double priceSAXO) {
-        this.priceSAXO = priceSAXO;
-    }
-
-    public double getPriceCDON() {
-        return priceCDON;
-    }
-
-    public void setPriceCDON(double priceCDON) {
-        this.priceCDON = priceCDON;
-    }
-
-    public double getPriceAB() {
-        return priceAB;
-    }
-
-    public void setPriceAB(double priceAB) {
-        this.priceAB = priceAB;
+    public String getTitle() {
+        return title;
     }
 
     public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public double getPriceAB() {
+        return priceAB;
     }
 
-    public String getPublisher() {
-        return Publisher;
+    public double getPriceSAXO() {
+        return priceSAXO;
     }
 
-    public void setPublisher(String publisher) {
-        Publisher = publisher;
+    public double getPriceCDON() {
+        return priceCDON;
+    }
+
+    public int getVersion() {
+        return version;
     }
 }
+
 
