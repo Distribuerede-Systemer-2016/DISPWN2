@@ -51,7 +51,6 @@ public class Curriculum {
     public void setCurriculumID(int curriculumID) {
         this.curriculumID = curriculumID;
     }
-
     @Override
     public String toString() {
         return "Curriculum{" +

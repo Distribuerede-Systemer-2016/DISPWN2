@@ -10,7 +10,6 @@ public class Config {
 
     public static JsonObject initConfig() {
 
-
         JsonObject json = new JsonObject();
 
         try {
@@ -20,13 +19,9 @@ public class Config {
 
         } catch (Exception e) {
             e.printStackTrace();
-
         }
-
         return json;
     }
-
-
 
     public static String getServerUrl() {
         return serverUrl;

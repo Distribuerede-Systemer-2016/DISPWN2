@@ -38,16 +38,16 @@ public class User {
         this.userID = userID;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstName(String firstName) {
+        return this.firstName;
     }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastName(String lastName) {
+        return this.lastName;
     }
 
     public void setLastName(String lastName) {

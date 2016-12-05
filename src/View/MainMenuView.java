@@ -36,21 +36,22 @@ public class MainMenuView {
                 showMenu();
                 break;
         }
-        showMenu();
+
     }
 
     public void printBooks() {
         ArrayList<Book> books = mainController.getBooks();
         System.out.println("Her er alle aktuelle bøger i systemet: ");
         for (Book book : books) {
-            System.out.println("id:\t " + book.getBookID() + " title: " + book.getTitle());
+            System.out.println("\nId: " + book.getBookID() + "\nTitle: " + book.getTitle());
         }
     }
     public void printBook(){
         System.out.println("\nIndast id på den ønskede bog");
         Book book = HTTPRequest.getBook(input.nextInt());
+        System.out.println("\nHer er de forskellige priser for den valgte bog:\n");
         System.out.println("Id: " + book.getBookID()
-                + " title: " + book.getTitle()
+                + "\nTitle: " + book.getTitle()
                 + "\nPris Saxo \t" + book.getPriceSAXO() + "\t Kr. "
                 + "\nPris CDON \t" + book.getPriceCDON() + "	 Kr. "
                 + "\nPris AB \t" + book.getPriceAB() + "	 Kr. \n");
@@ -94,6 +95,6 @@ public class MainMenuView {
                     + "\n ISBN:      " + book.getISBN());
         }
         printBook();
+        showMenu();
     }
 }
-

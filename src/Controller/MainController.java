@@ -1,36 +1,25 @@
 package Controller;
 
-
 import Sdk.HTTPRequest;
 import Models.Book;
 import View.MainView;
 import Models.User;
-import View.BookView;
-import View.UserView;
 
 import java.util.ArrayList;
 
 public class MainController {
 
-    private BookView bookView;
-    private UserView userView;
     private User currentUser;
 
     public MainController(){
 
         new MainView(this).showMenu();
     }
-    public BookView getBookView() {
-        return bookView;
-    }
-    public UserView getUserView() {
-        return userView;
-    }
 
-    public boolean authUser(String username, String password) {
+    public boolean authUser(String username, String hashedPassword) {
         User user = new User();
         user.setUsername(username);
-        user.setPassword(password);
+        user.setPassword(hashedPassword);
         User userResponse = HTTPRequest.authorizeLogin(user);
 
         if(userResponse != null){
@@ -41,9 +30,14 @@ public class MainController {
             return false;
     }
 
-    public boolean createUser(String username) {
+    public boolean createUser(String firstName, String lastName, String email, String username, String password) {
         User user = new User();
+        user.getFirstName(firstName);
+        user.getLastName(lastName);
         user.setUsername(username);
+        user.setPassword(password);
+        user.setEmail(email);
+
 
         return HTTPRequest.createUser(user);
     }
