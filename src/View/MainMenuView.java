@@ -4,6 +4,7 @@ package View;
 import Controller.MainController;
 import Models.Book;
 import Models.Curriculum;
+import Models.User;
 import Sdk.HTTPRequest;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.Scanner;
 public class MainMenuView {
     private MainController mainController;
     private static Scanner input;
+    User currentUser;
 
 
     public MainMenuView(MainController mainController) {
@@ -24,6 +26,8 @@ public class MainMenuView {
         System.out.println("Du har nu følgende valgmuligheder:\n");
         System.out.println("1) Udskriv alle bøger ");
         System.out.println("2) Udskriv aktuelle semestre ");
+        System.out.println("3) Ændre brugeroplysninger ");
+        System.out.println("4) Logud ");
         switch (input.nextInt()) {
             case 1:
                 printBooks();
@@ -31,11 +35,20 @@ public class MainMenuView {
             case 2:
                 printPensumListe();
                 break;
+            case 3:
+                updateUser();
+            case 4:
+                currentUser = null;
+                break;
+
             default:
                 System.out.println("Du skal vælge et tal\n\n");
                 showMenu();
                 break;
         }
+    while (currentUser != null);
+        System.out.println("Du er nu logget ud\n");
+
 
     }
 
@@ -55,6 +68,15 @@ public class MainMenuView {
                 + "\nPris Saxo \t" + book.getPriceSAXO() + "\t Kr. "
                 + "\nPris CDON \t" + book.getPriceCDON() + "	 Kr. "
                 + "\nPris AB \t" + book.getPriceAB() + "	 Kr. \n");
+    }
+    private void updateUser(){
+        System.out.println("\nDu har valgt at opdatere dine brugeroplysninger");
+        System.out.println("\nVælg nyt fornavn");
+        System.out.println("\nVælg nyt efternavn");
+        System.out.println("\nVælg ny email");
+        System.out.println("\nVælg nyt brugernavn");
+        System.out.println("\nVælg nyt password");
+
     }
 
     private void printPensumListe() {

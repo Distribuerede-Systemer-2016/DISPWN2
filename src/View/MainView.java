@@ -36,7 +36,7 @@ public class MainView {
 
                 break;
             case 2:
-                System.out.println("Du har valgt at Oprette en bruger\n");
+                System.out.println("Du har valgt at oprette en bruger\n");
                createUser();
             default:
                 System.out.println("Indtast enten 1 eller 2");
@@ -59,9 +59,9 @@ public class MainView {
         System.out.println("Indtast Password");
         password = input.nextLine();
 
-        boolean created = mainController.createUser(firstName, lastName, email, username, Digester.hashWithSalt(password));
+        boolean userCreated = mainController.createUser(firstName, lastName, email, username, Digester.hashWithSalt(password)); //kaldt på serveren
 
-        if (created)
+        if (userCreated)
         System.out.println("Du har oprettet en bruger");
         else
         System.out.println("Der opstod en fejl, der gjorde, at din bruger ikke blev oprettet\n");
@@ -78,5 +78,6 @@ public class MainView {
         password = input.nextLine();
         return mainController.authUser(username, password);
     }
+
 }
 
