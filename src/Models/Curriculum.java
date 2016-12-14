@@ -1,5 +1,6 @@
 package Models;
 
+//tilføjer getteres og setters til pensumlister
 public class Curriculum {
     String school, education;
     int semester, curriculumID;

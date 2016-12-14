@@ -1,8 +1,10 @@
 package View;
+// Denne klasse indeholder de muligheder, som er tilgængelige, når brugeren ikke er logget ind.
 
 import Controller.MainController;
 import Encryption.Digester;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainView {
@@ -11,42 +13,48 @@ public class MainView {
     private Scanner input;
 
     public MainView(MainController mainController){
+        input = new Scanner(System.in);
         this.mainController = mainController;
         mainMenuView = new MainMenuView(mainController);
-        input = new Scanner(System.in);
 
     }
 
-    public void showMenu() {
+    public void startMenu() {
         System.out.println("Velkommen til BookIT\n");
         System.out.println("Du har nu følgende muligheder:");
         System.out.println("1) Login");
         System.out.println("2) Opret bruger");
 
+        Scanner input = new Scanner(System.in);
 
-        switch (input.nextInt()) {
+        int choice = 0;
+
+        do {
+            try {
+                choice = input.nextInt();
+
+        switch (choice) {
             case 1:
-                boolean authUser = loginMenu();
-
-                if(authUser)
-                    mainMenuView.showMenu();
-                else
-                    System.out.println("Forkert brugernavn eller password. Prøv igen\n");
-                showMenu();
-
+                loginMenu();
                 break;
             case 2:
                 System.out.println("Du har valgt at oprette en bruger\n");
                createUser();
             default:
-                System.out.println("Indtast enten 1 eller 2");
-                showMenu();
+                System.out.println("Du skal vælge enten 1 eller 2");
                 break;
         }
+            }
+        catch (InputMismatchException e) {
+            System.out.println ("Du skal vælge et tal\n");
+            input.nextLine();
+            }
+        }
+        while(true);
+
     }
 
     private void createUser() {
-        input.nextLine();
         String firstName, lastName, email,username, password;
         System.out.println("Indtast Fornavn");
         firstName = input.nextLine();
@@ -59,16 +67,17 @@ public class MainView {
         System.out.println("Indtast Password");
         password = input.nextLine();
 
-        boolean userCreated = mainController.createUser(firstName, lastName, email, username, Digester.hashWithSalt(password)); //kaldt på serveren
+        boolean userCreated = mainController.addUser(firstName, lastName, email, username, password);
 
         if (userCreated)
         System.out.println("Du har oprettet en bruger");
         else
         System.out.println("Der opstod en fejl, der gjorde, at din bruger ikke blev oprettet\n");
+        startMenu();
 
     }
 
-    private boolean loginMenu(){
+    private void loginMenu(){
         input.nextLine();
         String username, password;
         System.out.println("Du har valgt: Login\n");
@@ -76,7 +85,14 @@ public class MainView {
         username = input.nextLine();
         System.out.println("Indtast dit password");
         password = input.nextLine();
-        return mainController.authUser(username, password);
+
+
+        boolean authUser = mainController.authUser(username, password);
+        if(authUser)
+            mainMenuView.showMenu();
+        else
+            System.out.println("Forkert brugernavn eller password. Prøv igen\n");
+        startMenu();
     }
 
 }

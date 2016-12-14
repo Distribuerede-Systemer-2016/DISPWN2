@@ -1,5 +1,5 @@
 package Sdk;
-
+// Denne klasse gør det muligt for klienten at lave HTTP kald til serveren
 import Encryption.Crypter;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -14,18 +14,63 @@ public class HTTPRequest {
 
 
     public static User authorizeLogin(User user) {
-        ClientResponse clientResponse = Connection.post(null, "/user/login", new Gson().toJson(user));
-        User userResponse = null;
+
+        String encryptedJson = Crypter.encryptDecryptXOR(new Gson().toJson(user));
+        ClientResponse clientResponse = Connection.post(null, "/user/login", encryptedJson);
+
+        User u = null;
 
         if (clientResponse == null) {
             System.out.println("no connection to server");
         } else {
-            String json = clientResponse.getEntity(String.class);
+            String response = clientResponse.getEntity(String.class);
             if (clientResponse.getStatus() == 200) {
-                userResponse = new Gson().fromJson(json, User.class);
+                u = new Gson().fromJson(response, User.class);
             }
         }
-        return userResponse;
+        return u;
+
+
+    }
+    public static boolean addUser(User user) {
+        String encryptedJson = Crypter.encryptDecryptXOR(new Gson().toJson(user));
+        ClientResponse clientResponse = Connection.post(null, "/user/", encryptedJson);
+        if (clientResponse == null) {
+            System.out.println("no connection to server");
+        } else {
+            if (clientResponse.getStatus() == 200) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean deleteUser(User currentUser) {
+        ClientResponse clientResponse = Connection.delete(currentUser.getToken(), "/user/" + currentUser.getUserID());
+        if (clientResponse == null) {
+            System.out.println("no connection to server");
+        } else {
+            if (clientResponse.getStatus() == 200) {
+                return true;
+            }
+
+        }
+        System.out.println("false");
+        return false;
+    }
+    public static boolean updateUser(User currentUser) {
+        String encryptedJson = Crypter.encryptDecryptXOR(new Gson().toJson(currentUser));
+        ClientResponse clientResponse = Connection.put(currentUser.getToken(), "/user/" + currentUser.getUserID(), encryptedJson);
+
+        if (clientResponse == null) {
+            System.out.println("no connection to server");
+        } else {
+            if (clientResponse.getStatus() == 200) {
+                return true;
+            }
+        }
+        return false;
+
     }
 
     public static ArrayList<Book> getBooks() {
@@ -65,17 +110,6 @@ public class HTTPRequest {
         return book;
     }
 
-    public static boolean createUser(User user) {
-        ClientResponse clientResponse = Connection.post(null, "/user/", new Gson().toJson(user));
-        if (clientResponse == null) {
-            System.out.println("no connection to server");
-        } else {
-            if (clientResponse.getStatus() == 200) {
-                return true;
-            }
-        }
-        return false;
-    }
 
     public static ArrayList<Curriculum> getCurriculums() {
         ClientResponse clientResponse = Connection.get("/curriculum");
@@ -114,4 +148,5 @@ public class HTTPRequest {
         }
         return books;
     }
+
 }
