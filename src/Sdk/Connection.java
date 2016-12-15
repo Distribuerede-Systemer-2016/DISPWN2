@@ -7,6 +7,7 @@ public class Connection {
 
     static Client client = Client.create();
 
+// denne metode er med til at hente bestemte informationer ned fra serveren
     public static ClientResponse get(String path) {
 
         ClientResponse clientResponse = null;
@@ -21,7 +22,7 @@ public class Connection {
         }
         return clientResponse;
     }
-
+// denne metode bruger jeg, når jeg opretter en bruger. Den opretter forbindelse til servern, når der er en bruger, som skal gemmes i databsen
     public static ClientResponse post(String token, String path, String json) {
         ClientResponse clientResponse = null;
         try {
@@ -36,7 +37,7 @@ public class Connection {
         }
         return clientResponse;
     }
-
+    // denne metode skaber forbindelse til serveren, som ændrer en bruger, baseret på brugerens token
         public static ClientResponse put(String token, String path, String json) {
 
             ClientResponse clientResponse = null;
@@ -53,7 +54,7 @@ public class Connection {
         }
 
 
-
+// denne metode skaber forbindelse til serveren, som sletter en bruger baseret på den token, brugeren har
     public static ClientResponse delete(String token, String path) {
 
         ClientResponse clientResponse = null;

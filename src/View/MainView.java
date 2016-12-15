@@ -2,8 +2,6 @@ package View;
 // Denne klasse indeholder de muligheder, som er tilgængelige, når brugeren ikke er logget ind.
 
 import Controller.MainController;
-import Encryption.Digester;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -18,7 +16,7 @@ public class MainView {
         mainMenuView = new MainMenuView(mainController);
 
     }
-
+// Dette er startmenuen, som man bliver præsenteret for, når man åbner BookIT
     public void startMenu() {
         System.out.println("Velkommen til BookIT\n");
         System.out.println("Du har nu følgende muligheder:");
@@ -53,7 +51,7 @@ public class MainView {
         while(true);
 
     }
-
+// her opretter man en bruger med de informationer der skal til
     private void createUser() {
         String firstName, lastName, email,username, password;
         System.out.println("Indtast Fornavn");
@@ -76,7 +74,7 @@ public class MainView {
         startMenu();
 
     }
-
+// her skal man indtaste sit brugernavn og password, hvis det bliver accepteret, bliver man logget ind.
     private void loginMenu(){
         input.nextLine();
         String username, password;

@@ -21,7 +21,7 @@ public class MainMenuView {
         input = new Scanner(System.in);
     }
 
-
+// denne menu bliver præsenteret for en, når man er logget ind
     public void showMenu() {
         System.out.println("\nDu har nu følgende valgmuligheder:\n");
         System.out.println("1) Udskriv alle bøger ");
@@ -68,7 +68,7 @@ public class MainMenuView {
     }
         while (true);
     }
-
+// Denne metode sletter din bruger
     private void deleteUser() {
 
         boolean userDeleted = mainController.deleteUser();
@@ -82,7 +82,7 @@ public class MainMenuView {
 
     }
     }
-
+// denne metode henter alle bøger fra databasen og præsentere dem for brugeren
     public void Books() {
         ArrayList<Book> books = mainController.getBooks();
         System.out.println("Her er alle aktuelle bøger i systemet: ");
@@ -91,6 +91,7 @@ public class MainMenuView {
         }
         showMenu();
     }
+    // Denne metode henter en bestemt bog samt priserne på bogen
     public void Book(){
         System.out.println("\nIndast id på den ønskede bog");
         Book book = HTTPRequest.getBook(input.nextInt());
@@ -102,7 +103,7 @@ public class MainMenuView {
                 + "\nPris AB \t" + book.getPriceAB() + "	 Kr. \n");
     }
 
-
+// Denne Menu er med til at opdatere en bruger
     private void updateUser(){
         input.nextLine();
         String firstName, lastName, email,username;
@@ -127,7 +128,8 @@ public class MainMenuView {
             System.out.println("Der opstod en fejl, der gjorde, at din bruger ikke blev opdateret\n");
 
     }
-
+// denne metode henter hvilke semestre der er tilgængelig i BookIT, så vælger man semester, hvor man får vist pensumlister fra databasen og prøsenterer dem for brugeren.
+// Herefter vælger brugeren hvilken bog de vil have vist bogen for
     private void curriculumLists() {
 
         input = new Scanner(System.in);

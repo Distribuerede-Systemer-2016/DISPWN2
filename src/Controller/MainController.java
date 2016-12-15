@@ -10,11 +10,11 @@ import java.util.ArrayList;
 public class MainController {
     private User currentUser;
 
-
+// starter "startMenu" op som den første menu
     public MainController(){
         new MainView(this).startMenu();
     }
-
+// denn metode bekræfter, om brugeren har rettigheder til at logge ind
     public boolean authUser(String username, String password) {
         User user = new User();
         user.setUsername(username);
@@ -28,7 +28,7 @@ public class MainController {
         else
             return false;
     }
-
+//Denne metode opretter en bruger
     public boolean addUser(String firstName, String lastName, String email, String username, String password) {
         User user = new User();
         user.setFirstName(firstName);
@@ -40,17 +40,18 @@ public class MainController {
 
     }
 
-
+//Denne metode sætter user til current user, som bruges til at logge ud og ind, opdatere og slette
     public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
     }
+    //denne metode sletter en bruger
     public boolean deleteUser() {
         boolean userDeleted = HTTPRequest.deleteUser(currentUser);
         if (userDeleted)
             currentUser = null;
         return userDeleted;
     }
-
+//Denne metode opdaterer en brugers oplysninger
     public boolean updateUser(String firstName, String lastName, String email, String username) {
         currentUser.setFirstName(firstName);
         currentUser.setLastName(lastName);
@@ -65,7 +66,7 @@ public class MainController {
         return updated;
 
     }
-
+// Denne metode henter bøger
     public ArrayList<Book> getBooks(){
         return HTTPRequest.getBooks();
     }
