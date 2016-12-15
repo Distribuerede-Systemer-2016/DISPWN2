@@ -847,7 +847,7 @@
       <workItem from="1481098436069" duration="2124000" />
       <workItem from="1481100925202" duration="5475000" />
       <workItem from="1481129254891" duration="10239000" />
-      <workItem from="1481283615006" duration="47222000" />
+      <workItem from="1481283615006" duration="47242000" />
     </task>
     <task id="LOCAL-00001" summary="Alt er blevet sat ind igen. Fk Lib">
       <created>1479991924770</created>
@@ -947,11 +947,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481747788216</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="DeleteUser virker">
+      <created>1481790369516</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1481790369516</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99565000" />
+    <option name="totallyTimeSpent" value="99585000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1021,7 +1028,8 @@
     <MESSAGE value="Opretbruger mangler at blive instantieret, men parametre er defineret." />
     <MESSAGE value="Logud virker, men brugeren bliver stadig ikke gemt." />
     <MESSAGE value="Create user virker. Update user virker." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create user virker. Update user virker." />
+    <MESSAGE value="DeleteUser virker" />
+    <option name="LAST_COMMIT_MESSAGE" value="DeleteUser virker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
