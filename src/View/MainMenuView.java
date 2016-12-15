@@ -13,8 +13,6 @@ import java.util.Scanner;
 public class MainMenuView {
     private MainController mainController;
     private static Scanner input;
-    MainView MainView;
-
 
     public MainMenuView(MainController mainController) {
         this.mainController = mainController;
@@ -68,7 +66,7 @@ public class MainMenuView {
     }
         while (true);
     }
-// Denne metode sletter din bruger
+// Denne metode sletter brugeren, som er logget ind
     private void deleteUser() {
 
         boolean userDeleted = mainController.deleteUser();

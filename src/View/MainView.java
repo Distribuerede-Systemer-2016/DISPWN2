@@ -37,7 +37,7 @@ public class MainView {
                 break;
             case 2:
                 System.out.println("Du har valgt at oprette en bruger\n");
-               createUser();
+               addUser();
             default:
                 System.out.println("Du skal vælge enten 1 eller 2");
                 break;
@@ -52,7 +52,7 @@ public class MainView {
 
     }
 // her opretter man en bruger med de informationer der skal til
-    private void createUser() {
+    private void addUser() {
         String firstName, lastName, email,username, password;
         System.out.println("Indtast Fornavn");
         firstName = input.nextLine();
