@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb829475-3e46-4c0c-b419-3110439d5164" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/MainController.java" afterPath="$PROJECT_DIR$/src/Controller/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Book.java" afterPath="$PROJECT_DIR$/src/Models/Book.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Curriculum.java" afterPath="$PROJECT_DIR$/src/Models/Curriculum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/User.java" afterPath="$PROJECT_DIR$/src/Models/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sdk/Connection.java" afterPath="$PROJECT_DIR$/src/Sdk/Connection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sdk/HTTPRequest.java" afterPath="$PROJECT_DIR$/src/Sdk/HTTPRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/MainMenuView.java" afterPath="$PROJECT_DIR$/src/View/MainMenuView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/MainView.java" afterPath="$PROJECT_DIR$/src/View/MainView.java" />
     </list>
     <ignored path="DISPWN2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainMenuView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainMenuView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/View/MainMenuView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="87" column="70" selection-start-line="87" selection-start-column="70" selection-end-line="87" selection-end-column="70" />
+            <state relative-caret-position="195">
+              <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HTTPRequest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HTTPRequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sdk/HTTPRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+            <state relative-caret-position="333">
+              <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,8 +108,8 @@
       <file leaf-file-name="MainView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/MainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-241">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="44">
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,11 +130,15 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="191">
+              <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
               <folding>
+                <element signature="e#1052#1053#0" expanded="true" />
+                <element signature="e#1081#1082#0" expanded="true" />
                 <element signature="e#1507#1508#0" expanded="true" />
                 <element signature="e#1538#1539#0" expanded="true" />
+                <element signature="e#1948#1949#0" expanded="true" />
+                <element signature="e#1976#1977#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,8 +147,8 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="-76">
+              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#226#227#0" expanded="true" />
@@ -851,7 +847,7 @@
       <workItem from="1481098436069" duration="2124000" />
       <workItem from="1481100925202" duration="5475000" />
       <workItem from="1481129254891" duration="10239000" />
-      <workItem from="1481283615006" duration="45687000" />
+      <workItem from="1481283615006" duration="47222000" />
     </task>
     <task id="LOCAL-00001" summary="Alt er blevet sat ind igen. Fk Lib">
       <created>1479991924770</created>
@@ -944,11 +940,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481103201836</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Create user virker. Update user virker.">
+      <created>1481747788216</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1481747788216</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98030000" />
+    <option name="totallyTimeSpent" value="99565000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1017,11 +1020,12 @@
     <MESSAGE value="ISBN virker" />
     <MESSAGE value="Opretbruger mangler at blive instantieret, men parametre er defineret." />
     <MESSAGE value="Logud virker, men brugeren bliver stadig ikke gemt." />
-    <option name="LAST_COMMIT_MESSAGE" value="Logud virker, men brugeren bliver stadig ikke gemt." />
+    <MESSAGE value="Create user virker. Update user virker." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create user virker. Update user virker." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1098,8 +1102,12 @@
         <state relative-caret-position="690">
           <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
           <folding>
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
             <element signature="e#1507#1508#0" expanded="true" />
             <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1948#1949#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1189,8 +1197,12 @@
         <state relative-caret-position="690">
           <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
           <folding>
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
             <element signature="e#1507#1508#0" expanded="true" />
             <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1948#1949#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1360,25 +1372,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Curriculum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Sdk/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1393,10 +1386,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MainView.java">
+    <entry file="file://$PROJECT_DIR$/src/Sdk/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-241">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="30">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sdk/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sdk/HTTPRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1411,28 +1420,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MainMenuView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="87" column="70" selection-start-line="87" selection-start-column="70" selection-end-line="87" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sdk/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="-76">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#226#227#0" expanded="true" />
@@ -1443,18 +1434,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sdk/Connection.java">
+    <entry file="file://$PROJECT_DIR$/src/Models/Curriculum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="-184">
+          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sdk/HTTPRequest.java">
+    <entry file="file://$PROJECT_DIR$/src/Models/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+        <state relative-caret-position="191">
+          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+          <folding>
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1948#1949#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MainMenuView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
