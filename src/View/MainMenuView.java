@@ -14,6 +14,7 @@ public class MainMenuView {
     private MainController mainController;
     private static Scanner input;
 
+
     public MainMenuView(MainController mainController) {
         this.mainController = mainController;
         input = new Scanner(System.in);
@@ -66,7 +67,7 @@ public class MainMenuView {
     }
         while (true);
     }
-// Denne metode sletter brugeren, som er logget ind
+// Denne metode sletter en bruger ud fra dens token
     private void deleteUser() {
 
         boolean userDeleted = mainController.deleteUser();
